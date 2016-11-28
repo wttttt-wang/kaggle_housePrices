@@ -1,6 +1,10 @@
-#preprocessing for training&test data
-#@2016.11.08
-
+'''
+preprocessing for training&test data
+@2016.11.08
+@ first, log transform on target, and log transform on all skewed features
+@ then, get_dummies for all categorical features
+@ last,simply filling missing value with mean()[because there is no object then]
+'''
 import pandas as pd
 #step1:reading csv data
 train = pd.read_csv('train.csv')

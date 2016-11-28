@@ -1,0 +1,16 @@
+'''
+the preprocessing apart from dimensional reduction is :
+@ missing data filling: 
+    RandomForest filling for important features(highly relevant to SalePrice);
+    another value filling for features having many missing value, or its missing value has some meaning.
+    mean()/mode() filling for other features
+@ data transform: get_dummies for categorical features
+@ log transform for SalePrice and some skewed features
+''' 
+compare the dimensional reduction techniques:
+# reduction techniques  :   rmse(3-fold cross-validation
+1) no reduction: [ 0.11345483  0.1393913   0.12302224]
+2) pca,num_fea_toleave = 200 : [ 0.16004103  0.18244433  0.15433193]
+3) pca,num_fea_toleave = 250 : [ 0.16053321  0.18218281  0.15488571]
+4) pca,num_fea_toleave = 150 : [ 0.16039028  0.18429044  0.15379175]
+
